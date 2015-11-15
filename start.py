@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
-import pygame, numpy
+try:
+    import pygame, numpy
+except ImportError, message:
+    raise SystemExit,  "Unable to load module. %s" % message
 
 def update_pos(event):
     if event.pos[1] < (TFINESTRA_ALTURA-100-image.get_rect().size[1]/2):
