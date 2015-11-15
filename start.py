@@ -38,7 +38,7 @@ WHITE = (255, 255, 255)
 BLUE =  (  0,   0, 255)
 GREEN = (  0, 255,   0)
 RED =   (255,   0,   0)
-image = pygame.image.load("./data/images/crono_front.gif").convert()
+image = pygame.image.load("./data/images/roto2.gif").convert()
 menu = pygame.image.load("./data/images/menu.bmp").convert()
 fondo = pygame.image.load("./data/images/fondo.jpg").convert()
 
