@@ -76,12 +76,7 @@ while not done:
 
     fps = fuente.render("FPS: " + str(clock.get_fps()), True, BLACK)
     screen.blit(fps, [10, 10])
-
-    
-
     pygame.display.flip()
-
-
 
 pygame.quit()
 quit()
