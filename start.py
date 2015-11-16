@@ -13,7 +13,7 @@ def update_pos(event):
         posX=event.pos[0]-image.get_rect().size[0]/2
         posY=TFINESTRA_ALTURA-100-image.get_rect().size[1]
     return posX,posY
-    
+
 def grayscale(img):
     arr = pygame.surfarray.array3d(img)
     #luminosity filter
