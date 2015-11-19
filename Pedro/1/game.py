@@ -41,9 +41,9 @@ hecho = False
 # Se usa para establecer cuan rápido se actualiza la pantalla
  
 reloj = pygame.time.Clock()
-
+click_apretat=False
 # Creació del objecte
-roto2 = Player(0,0,dimensiones,pygame.image.load("./data/images/roto2.gif").convert())
+roto2 = Player(100,100,dimensiones,pygame.image.load("./data/images/roto2.gif").convert())
   
 # -------- Bucle principal del Programa -----------
 while not hecho:
@@ -51,6 +51,15 @@ while not hecho:
     for evento in pygame.event.get():
         if evento.type == pygame.QUIT: 
             hecho = True
+        elif evento.type == pygame.MOUSEBUTTONDOWN: 
+            click_apretat = True
+            roto2.move(evento)
+
+        elif evento.type == pygame.MOUSEBUTTONUP:
+            click_apretat = False
+        elif click_apretat & (evento.type == pygame.MOUSEMOTION):
+            roto2.move(evento)
+
      
     # --- LA LÓGICA DEL JUEGO DEBERÍA IR AQUÍ
 
@@ -60,8 +69,10 @@ while not hecho:
     # de esto, de otra forma serán borrados por este comando:
     #pantalla.fill(BLANCO)
     pantalla.blit(fondo,[0,0])
-    pantalla.blit(roto2.sprite, (roto2.positionX,roto2.positionY))
     pantalla.blit(menu,(0,dimensiones[1]-100))
+    pantalla.blit(roto2.sprite, (roto2.positionX,roto2.positionY))
+    print str(roto2.positionX)+"/"+str(roto2.positionY)
+
 
 
 

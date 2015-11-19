@@ -1,4 +1,4 @@
-"""
+﻿"""
 This class create a player that is able to :
 Move
 This class needs:
@@ -20,9 +20,11 @@ class Player():
 		self.scereen.set_mode(dimensions)
 		self.sprite = sprite
 	def move(self,event):
-		if event.pos[1] < (height-100-image.get_rect().size[1]/2):
-			self.positionX=event.pos[0]-image.get_rect().size[0]/2
-			self.positionY=event.pos[1]-image.get_rect().size[1]/2
+		if event.pos[1] < (self.height-100-self.sprite.get_rect().size[1]):
+			self.positionX=event.pos[0]-self.sprite.get_rect().size[0]/2
+			self.positionY=event.pos[1]-self.sprite.get_rect().size[1]/2
 		else:
-			self.positionX=event.pos[0]-image.get_rect().size[0]/2
-			self.positionY=width-100-image.get_rect().size[1]
+			self.positionX=event.pos[0]-self.sprite.get_rect().size[0]/2
+			self.positionY=event.pos[1]-self.height-self.sprite.get_rect().size[1]/2
+
+        
