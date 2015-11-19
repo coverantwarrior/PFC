@@ -19,7 +19,7 @@ pygame.init()
 # Establecemos las dimensiones de la pantalla [largo,altura]
 dimensiones = [700,500]
 pantalla = pygame.display.set_mode(dimensiones) 
-pygame.display.set_caption("1 the Game")
+pygame.display.set_caption("1 the G ame")
 
 # Definimos algunos colores
 NEGRO = (0, 0 ,0)
