@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{17b0e7eb-1c30-4062-9645-87acacc22272}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>start.py</StartupFile>
+    <StartupFile>Pedro\1\game.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -21,7 +21,23 @@
     <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Pedro\1\Classes\PlayerClass.py" />
+    <Compile Include="Pedro\1\Classes\test.py" />
+    <Compile Include="Pedro\1\Classes\__init__.py" />
+    <Compile Include="Pedro\1\game.py" />
     <Compile Include="start.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pedro\" />
+    <Folder Include="Pedro\1\" />
+    <Folder Include="Pedro\1\Classes\" />
+    <Folder Include="Pedro\1\data\" />
+    <Folder Include="Pedro\1\data\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Pedro\1\data\images\fondo.jpg" />
+    <Content Include="Pedro\1\data\images\menu.bmp" />
+    <Content Include="Pedro\1\data\images\roto2.gif" />
   </ItemGroup>
   <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />

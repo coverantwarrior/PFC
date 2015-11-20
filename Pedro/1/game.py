@@ -17,7 +17,9 @@ from Classes.PlayerClass import *
 pygame.init()
 
 # Establecemos las dimensiones de la pantalla [largo,altura]
-dimensiones = [700,500]
+TFINESTRA_LATERAL=800
+TFINESTRA_ALTURA=600
+dimensiones = [TFINESTRA_LATERAL,TFINESTRA_ALTURA]
 pantalla = pygame.display.set_mode(dimensiones) 
 pygame.display.set_caption("1 the Ga me")
 
@@ -43,7 +45,7 @@ hecho = False
 reloj = pygame.time.Clock()
 click_apretat=False
 # Creació del objecte
-roto2 = Player(100,100,dimensiones,pygame.image.load("./data/images/roto2.gif").convert())
+roto2 = Player(100,100,dimensiones,pygame.image.load("./data/images/roto2.gif").convert(),TFINESTRA_ALTURA)
   
 # -------- Bucle principal del Programa -----------
 while not hecho:
@@ -86,3 +88,4 @@ while not hecho:
 # Si te olvidas de esta última línea, el programa se 'colgará'
 # al salir si lo hemos estado ejecutando desde el IDLE.
 pygame.quit()
+quit()
