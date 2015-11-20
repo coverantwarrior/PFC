@@ -4,7 +4,7 @@ Move
 This class needs:
 envoirment
 """
-import pygame, numpy
+import pygame
 class Player():
 	scereen=pygame.display
 	positionX=0
