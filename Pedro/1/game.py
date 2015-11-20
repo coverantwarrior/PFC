@@ -13,28 +13,23 @@
  
 import pygame , numpy
 from Classes.PlayerClass import *
- 
+from Classes.colors import*
+
 pygame.init()
 
 # Establecemos las dimensiones de la pantalla [largo,altura]
 TFINESTRA_LATERAL=800
 TFINESTRA_ALTURA=600
-dimensiones = [TFINESTRA_LATERAL,TFINESTRA_ALTURA]
-pantalla = pygame.display.set_mode(dimensiones) 
-pygame.display.set_caption("1 the Ga me")
+dimensiones = (TFINESTRA_LATERAL,TFINESTRA_ALTURA)
+pantalla = pygame.display.set_mode((dimensiones),pygame.HWSURFACE|pygame.DOUBLEBUF|pygame.RESIZABLE) 
+pygame.display.set_caption("Demigame v0.01")
 
 # Definimos algunos colores
-NEGRO = (0, 0 ,0)
-BLANCO = (255, 255, 255)
-VERDE = (0, 255, 0)
-ROJO = (255, 0, 0)
-AZUL = (0, 0, 255)
-VIOLETA = (98, 0, 255)
+
 
 #image = pygame.image.load("./data/images/roto2.gif").convert()
 menu = pygame.image.load("./data/images/menu.bmp").convert()
 fondo = pygame.image.load("./data/images/fondo.jpg").convert()
-
 #El bucle se ejecuta hasta que el usuario hace click sobre el botón de cierre.
  
 hecho = False
@@ -56,11 +51,11 @@ while not hecho:
         elif evento.type == pygame.MOUSEBUTTONDOWN: 
             click_apretat = True
             roto2.move(evento)
-
         elif evento.type == pygame.MOUSEBUTTONUP:
             click_apretat = False
         elif click_apretat & (evento.type == pygame.MOUSEMOTION):
             roto2.move(evento)
+            
 
      
     # --- LA LÓGICA DEL JUEGO DEBERÍA IR AQUÍ
