@@ -11,6 +11,7 @@ def update_pos(event):
         posY=event.pos[1]-image.get_rect().size[1]/2
     else:
         posX=event.pos[0]-image.get_rect().size[0]/2
+
         posY=TFINESTRA_ALTURA-100-image.get_rect().size[1]
     return posX,posY
 
