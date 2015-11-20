@@ -41,6 +41,7 @@
     <Content Include="Pedro\1\data\images\fondo.jpg" />
     <Content Include="Pedro\1\data\images\menu.bmp" />
     <Content Include="Pedro\1\data\images\roto2.gif" />
+    <Content Include="README.md" />
   </ItemGroup>
   <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
