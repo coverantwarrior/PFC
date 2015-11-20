@@ -21,6 +21,9 @@
     <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Pedro\1\Classes\colors.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Pedro\1\Classes\PlayerClass.py" />
     <Compile Include="Pedro\1\Classes\test.py" />
     <Compile Include="Pedro\1\Classes\__init__.py" />
