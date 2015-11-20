@@ -24,12 +24,12 @@ class Player():
 		if event.pos[1] < (self.TFINESTRA_ALTURA-100-self.sprite.get_rect().size[1]/2):
 			self.positionX=event.pos[0]-self.sprite.get_rect().size[0]/2
 			self.positionY=event.pos[1]-self.sprite.get_rect().size[1]/2
-			print " 1"+str(self.TFINESTRA_ALTURA)
+			print "zona 1"+str(self.TFINESTRA_ALTURA)
 		else:
 			self.positionX=event.pos[0]-self.sprite.get_rect().size[0]/2
 			self.positionY=self.TFINESTRA_ALTURA-100-self.sprite.get_rect().size[1]
 
-			print " 2"+str(self.TFINESTRA_ALTURA)
+			print "zona 2"+str(self.TFINESTRA_ALTURA)
 
 
 		
